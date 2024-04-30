@@ -12,9 +12,11 @@ const app = express();
 
 // restrictions for API which page to asscess and which not in cors
 
+//mongodc pass = LTdc06MmKB2BCO6Q
+
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://deploy-mern-1whq.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -23,7 +25,7 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-mongoose.connect("mongodb://127.0.0.1:27017/UsersDB");
+mongoose.connect("mongodb+srv://jahangirsoomro30:LTdc06MmKB2BCO6Q@cluster0.ejtefgz.mongodb.net/UsersDB?retryWrites=true&w=majority&appName=Cluster0");
 
 // JWT Token Auth Verification
 
